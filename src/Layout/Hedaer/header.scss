@@ -1,0 +1,79 @@
+.header {
+    border-bottom: 1px solid #fff;
+    position: absolute;
+    width: 100%;
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+    }
+    .logo{
+        padding: 10px 0;
+        h1{
+            color: #FEFEFE;
+            margin: 0;
+            span{
+                color: #007F37;
+            }
+        }
+        p{
+            color: #FEBC59;
+            text-align: center;
+            font-size: 20px;
+            margin: 0;
+        }
+    }
+    &__menu {
+        display: flex;
+        gap: 40px;
+        line-height: 60px;
+
+        @mixin text($ff, $fstyle, $fw, $fsize, $lh, $c) {
+            font-family: $ff;
+            font-style: $fstyle;
+            font-weight: $fw;
+            font-size: $fsize;
+            line-height: $lh;
+            color: $c;
+        }
+        a {
+            @include text('Montserrat', normal, 500, 16px, 20px, #fff); padding: 40px 0;
+        }
+    }
+    .burger__menu{
+        display: none;
+        span{
+            width: 40px;
+            height: 2px;
+            display: inline-block;
+            background-color: white;
+            position: relative;
+            &::after{
+                content: '';
+                position: absolute;
+                width: 40px;
+                height: 2px;
+                top: 10px;
+            background-color: white;
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                width: 40px;
+                height: 2px;
+                top: -10px;
+            background-color: white;
+
+            }
+        }
+    }
+    @media screen and (max-width:768px){
+        .header__menu{
+            display: none;
+        }
+        .burger__menu{
+            display: block;
+        }
+    }
+}

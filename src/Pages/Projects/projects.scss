@@ -1,0 +1,48 @@
+.projects{
+    &__banner {
+        background-image: url(../../Asets/Projects/bg.jpg);
+        height: 900px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner {
+        color: #fff;
+        text-align: center;
+
+        @mixin text($ff, $fstyle, $fw, $fsize, $lh, $c) {
+            font-family: $ff;
+            font-style: $fstyle;
+            font-weight: $fw;
+            font-size: $fsize;
+            line-height: $lh;
+            color: $c;
+        }
+
+        p {
+            @include text('Montserrat', normal, 500, 16px, 20px, #fff)
+        }
+
+        h1 {
+            @include text('Montserrat', normal, 800, 48px, 64px, #fff);
+            padding: 0 10px;
+        }
+
+        @media screen and (max-width:510px) {
+            h1 {
+                font-size: 25px;
+            }
+        }
+
+        @media screen and (max-width:375px) {
+            h1 {
+                font-size: 23px;
+            }
+        }
+    }
+
+}

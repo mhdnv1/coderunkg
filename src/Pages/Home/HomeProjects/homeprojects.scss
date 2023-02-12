@@ -1,0 +1,60 @@
+.homeprojects {
+    background: linear-gradient(90deg, #504DC2 20.44%, #5F12D0 80.91%), #C4C4C4;
+    padding: 100px 0;
+
+    h3 {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 53px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    p {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25px;
+        text-align: center;
+        color: #999999;
+    }
+    .cards{
+        display: flex;
+        justify-content:center;
+        flex-wrap: wrap;
+        gap: 20px;
+        .homeprojects__card{
+            width: 32%;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid white;
+            margin-bottom: 20px;
+            padding: 20px;
+
+        }
+        h5{
+              margin: 20px 0;
+        }
+        a{
+            color: white;
+            font-size: 30px;
+            // line-height: 40px;
+            &:hover{
+                color: blue;
+            }
+        }
+        @media screen and (max-width:992px) {
+            .homeprojects__card{
+                width: 50%;
+            }
+        }
+        @media screen and (max-width:778px) {
+            .homeprojects__card{
+                width: 100%;
+            }
+        }
+    }
+}

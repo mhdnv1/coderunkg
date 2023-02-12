@@ -1,0 +1,102 @@
+.home {
+    .home__banner {
+        background-image: url(../../Asets/Home/Rectangle.png);
+        height: 900px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .banner {
+        color: #fff;
+        text-align: center;
+
+        @mixin text($ff, $fstyle, $fw, $fsize, $lh, $c) {
+            font-family: $ff;
+            font-style: $fstyle;
+            font-weight: $fw;
+            font-size: $fsize;
+            line-height: $lh;
+            color: $c;
+        }
+
+        p {
+            @include text('Montserrat', normal, 500, 16px, 20px, #fff)
+        }
+
+        h1 {
+            @include text('Montserrat', normal, 800, 48px, 64px, #fff);
+            padding: 0 10px;
+        }
+
+        @media screen and (max-width:510px) {
+            h1 {
+                font-size: 25px;
+            }
+        }
+
+        @media screen and (max-width:375px) {
+            h1 {
+                font-size: 23px;
+            }
+        }
+    }
+
+    .home__video {
+        padding-top: 70px;
+        background-image: url(../../Asets/Home/videobg.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 570px;
+        position: relative;
+        .video{
+            border-radius: 20px;
+            display: block;
+            margin: 0 auto;
+        }
+        @media screen and (max-width:992px){
+            .video{
+                width: 415px;
+            }
+        }
+        @media screen and (max-width:720px){
+            .video{
+                width: 315px;
+            }
+        }
+        @media screen and (max-width:340px){
+            .video{
+                width: 215px;
+                height: 200px;
+            }
+        }
+        h1,
+        p {
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 53px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+
+        p {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 25px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+    }
+}

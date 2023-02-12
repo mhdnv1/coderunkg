@@ -1,0 +1,40 @@
+.homerequest {
+    padding: 85px 0;
+
+    .form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h5 {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 22px;
+            text-align: center;
+            color: #000000;
+        }
+
+        p {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 25px;
+            text-align: center;
+            color: #999999;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            margin: 10px 0;
+            border: 1px solid #F2F2F2;
+            box-shadow: 0px 0px 10px rgba(111, 111, 111, 0.25);
+            border-radius: 30px;
+            padding: 10px;
+            outline: 0;
+        }
+    }
+}
